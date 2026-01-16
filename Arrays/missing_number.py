@@ -1,11 +1,8 @@
 
 
 def missing_number(nums: list[int]) -> int | None:
-
-    for i in range(len(nums) + 1):
-        if i not in nums:
-            return i
-    return None
+    n = len(nums)
+    return n * (n + 1) // 2 - sum(nums)
 
 
 if __name__ == "__main__":
